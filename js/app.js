@@ -11,7 +11,7 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a, b) { //eslint-disable-line
   let sum = a + b;
   let message = `The sum of ${a} and ${b} is ${sum}.`;
-  console.log([sum, message]);
+  console.log([sum, message])
 
   return [sum, message];
 }
