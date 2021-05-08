@@ -10,10 +10,10 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
   let sum = a + b;
-  let message = `The sum of ${a} and ${b} is ${sum}.`;
-  console.log([sum, message]);
+  let message1 = `The sum of ${a} and ${b} is ${sum}.`;
+  console.log(sum, message1);
 
-  return [sum, message];
+  return [sum, message1];
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -30,12 +30,16 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b) { //eslint-disable-line
+function multiply(c, d) { //eslint-disable-line
+  let product = c * d;
+  let message2 = `The product of ${c} and ${d} is ${product}.`;
+  console.log(product, message2);
 
+  return [product, message2];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
