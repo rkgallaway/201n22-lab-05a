@@ -56,15 +56,15 @@ Test this function by hand in the console to get it working, and when you think 
 function sumAndMultiply(d, e, f) { //eslint-disable-line
   let sum2 = sum(d, e)[0];
   let sum3 = sum(sum2,f)[0];
-  console.log(sum2);
-  console.log(sum3);
+  // console.log(sum2);
+  // console.log(sum3);
   let product2 = multiply(d, e)[0];
   let product3 = multiply(product2, f)[0];
-  console.log(product2);
-  console.log(product3);
+  // console.log(product2);
+  // console.log(product3);
   let sumMessage = `${d} and ${e} and ${f} sum to ${sum3}.`;
   let productMessage = `The product of ${d} and ${e} and ${f} is ${product3}.`;
-  console.log(sumMessage, productMessage);
+  // console.log(sumMessage, productMessage);
   return [sum3, product3, sumMessage, productMessage];
 
 }
@@ -88,12 +88,21 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
+  let arraySum = sum(testArray[0], testArray[1])[0];
+  let arraySum2 = sum(arraySum, testArray[2])[0];
+  // console.log(arraySum);
+  // console.log(arraySum2);
+  let arraySumMessage = `${testArray} was passed in as an array of numbers, and ${arraySum2} is their sum.`;
+  console.log(arraySumMessage);
+
+  return [arraySum2, arraySumMessage];
+
 
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);//eslint-disable-line
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
