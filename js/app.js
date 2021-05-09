@@ -37,10 +37,10 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
   let product = a * b;
+  // let product = a * b;
   // for (let i = 0; i < arguments.length; i++){
   //   product *= arguments[i];
-  //   // console.log(arguments);
-  // }
+  // console.log(arguments);
   let message = `The product of ${a} and ${b} is ${product}.`;
 
   return [product, message];
@@ -163,7 +163,12 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+  let fancyProduct = multiply(dynamicArray);
+  console.log(dynamicArray);
+  console.log(fancyProduct[0]);
+  let productMessage = `The numbers ${dynamicArray} have a product of ${fancyProduct[1]}`;
+  console.log(productMessage);
+  return [fancyProduct, productMessage];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
