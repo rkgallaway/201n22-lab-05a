@@ -119,8 +119,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+  let product = multiply(sumArr[0], sumArr[1])[0];
+    product = multiply(product, sumArr[2])[0];
+    //console.log(sumTotal);
+    let message4 = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumTotal} is their sum.`;
+    //console.log(sumTotal, message4);
+    return [sumTotal, message4];
+    
+  }
 }
+    //
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
