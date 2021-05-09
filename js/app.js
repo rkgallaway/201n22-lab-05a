@@ -11,7 +11,7 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a, b) { //eslint-disable-line
   let sum = a + b;
   let message = `The sum of ${a} and ${b} is ${sum}.`;
-  console.log([sum, message]);
+  //console.log([sum, message]);
 
   return [sum, message];
 }
@@ -33,7 +33,7 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(a, b) { //eslint-disable-line
   let multiply = a * b;
   let message = `The product of ${a} and ${b} is ${multiply}.`;
-  console.log([multiply, message]);
+  //console.log([multiply, message]);
 
   return [multiply, message];
 
@@ -61,13 +61,13 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
   let sumABC = sum(sumAB, c)[0];
   let message = `${a} and ${b} and ${c} sum to ${sumABC}.`;
 
-  console.log(message);
+  //console.log(message);
 
   let productAB = multiply(a, b)[0];
   let ProductC = multiply(productAB, c)[0];
   let message1 = `The product of ${a} and ${b} and ${c} is ${ProductC}.`;
 
-  console.log(message1)
+  //console.log(message1)
 
   return [sumABC, ProductC, message, message1];
 
@@ -92,12 +92,18 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+  let sumTotal = sum(sumArr[0], sumArr[1])[0];
+  sumTotal = sum(sumTotal, sumArr[2])[0];
+  //console.log(sumTotal);
+  let message4 = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumTotal} is their sum.`;
+  //console.log(sumTotal, message4);
+  return [sumTotal, message4];
+  
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+ testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
